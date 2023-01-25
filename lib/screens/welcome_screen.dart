@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flash_chat/components/rounded_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
-   static String id = 'welcome_screen';
+  static String id = 'welcome_screen';
 
- // const WelcomeScreen({super.key});
+  // const WelcomeScreen({super.key});
   @override
   WelcomeScreenState createState() => WelcomeScreenState();
 }
@@ -31,28 +31,27 @@ class WelcomeScreenState extends State<WelcomeScreen> {
                     child: Image.asset('images/logo.png'),
                   ),
                 ),
-                 Text(
-                  'Global Chat',
+                Text(
+                  'Flash Chat',
                   style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.black
-                  ),
+                      fontSize: 45.0,
+                      fontWeight: FontWeight.w900,
+                      color: Colors.black),
                 ),
               ],
             ),
-             SizedBox(
+            SizedBox(
               height: 48.0,
             ),
             RoundedButton(
-              onPressed: (){
+              onPressed: () {
                 Navigator.pushNamed(context, LoginScreen.id);
               },
               colour: Colors.lightBlueAccent,
               title: Text('Login'),
             ),
             RoundedButton(
-              onPressed: (){
+              onPressed: () {
                 Navigator.pushNamed(context, RegistrationScreen.id);
               },
               colour: Colors.blueAccent,
@@ -64,5 +63,3 @@ class WelcomeScreenState extends State<WelcomeScreen> {
     );
   }
 }
-
-
